@@ -80,11 +80,15 @@ body * {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    animation: buttonAnimation2 0.3s ease-in-out forwards;
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
+    animation: buttonAnimation 0.3s ease-in-out forwards;
+}
+
+#switch button:hover {
+    outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -165,4 +169,23 @@ footer {
         --bg-url: url(./assets/bg-desktop-light.jpg);
     }
     
+}
+
+/* Animação do botão */
+@keyframes buttonAnimation {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes buttonAnimation2 {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
 }
